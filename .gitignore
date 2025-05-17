@@ -7,3 +7,4 @@
 2.ts.drizzle/db/drizzle/*
 2.ts.drizzle/db/sqlite.db
 
+3.ts.jest/node_modules/*
