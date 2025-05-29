@@ -1,6 +1,6 @@
 # node
 
-- [1. TypeScript](docs/1.TypeScript.md)
-- [2. TypeScript Drizzle](docs/2.ts.drizzle.md)
-- [3. TypeScript Jest](docs/3.ts.jest.md)
-- [4. TypeScript drizzle jest](docs/4.ts+drizzle+jest.md)
+- [1. TypeScript Node](docs/1.typescript.node.md)
+- [2. TypeScript Node Drizzle](docs/2.ts.node.drizzle.md)
+- [3. TypeScript Node Jest](docs/3.ts.node.jest.md)
+- [4. TypeScript Node Drizzle Jest](docs/4.ts.node.drizzle.jest.md)

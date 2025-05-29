@@ -1,11 +1,11 @@
-1.typescript/node_modules/*
+1.typescript.node/node_modules/*
 
-2.ts.drizzle/node_modules/*
-2.ts.drizzle/db/drizzle/*
-2.ts.drizzle/db/sqlite.db
+2.ts.node.drizzle/node_modules/*
+2.ts.node.drizzle/db/drizzle/*
+2.ts.node.drizzle/db/sqlite.db
 
-3.ts.jest/node_modules/*
+3.ts.node.jest/node_modules/*
 
-4.ts.drizzle.jest/node_modules/*
-4.ts.drizzle.jest/db/drizzle/*
-4.ts.drizzle.jest/db/sqlite.db
+4.ts.node.drizzle.jest/node_modules/*
+4.ts.node.drizzle.jest/db/drizzle/*
+4.ts.node.drizzle.jest/db/sqlite.db
