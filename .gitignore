@@ -9,3 +9,47 @@
 4.ts.node.drizzle.jest/node_modules/*
 4.ts.node.drizzle.jest/db/drizzle/*
 4.ts.node.drizzle.jest/db/sqlite.db
+
+
+5.ts.next.drizzle.jest/db/drizzle/*
+5.ts.next.drizzle.jest/db/sqlite.db
+
+
+5.ts.next.drizzle.jest/node_modules
+5.ts.next.drizzle.jest/.pnp
+5.ts.next.drizzle.jest/.pnp.*
+5.ts.next.drizzle.jest/.yarn/*
+5.ts.next.drizzle.jest/!.yarn/patches
+5.ts.next.drizzle.jest/!.yarn/plugins
+5.ts.next.drizzle.jest/!.yarn/releases
+5.ts.next.drizzle.jest/!.yarn/versions
+
+# testing
+5.ts.next.drizzle.jest/coverage
+
+# next.js
+5.ts.next.drizzle.jest/.next/
+5.ts.next.drizzle.jest/out/
+
+# production
+5.ts.next.drizzle.jest/build
+
+# misc
+5.ts.next.drizzle.jest/.DS_Store
+5.ts.next.drizzle.jest/*.pem
+
+# debug
+5.ts.next.drizzle.jest/npm-debug.log*
+5.ts.next.drizzle.jest/yarn-debug.log*
+5.ts.next.drizzle.jest/yarn-error.log*
+5.ts.next.drizzle.jest/.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+5.ts.next.drizzle.jest/.env*
+
+# vercel
+5.ts.next.drizzle.jest/.vercel
+
+# typescript
+5.ts.next.drizzle.jest/*.tsbuildinfo
+5.ts.next.drizzle.jest/next-env.d.ts
