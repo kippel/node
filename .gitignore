@@ -11,6 +11,8 @@
 4.ts.node.drizzle.jest/db/sqlite.db
 
 
+
+
 5.ts.next.drizzle.jest/db/drizzle/*
 5.ts.next.drizzle.jest/db/sqlite.db
 
@@ -53,3 +55,46 @@
 # typescript
 5.ts.next.drizzle.jest/*.tsbuildinfo
 5.ts.next.drizzle.jest/next-env.d.ts
+
+
+6.ts.next.drizzle.jest.auth/db/drizzle/*
+6.ts.next.drizzle.jest.auth/db/sqlite.db
+
+6.ts.next.drizzle.jest.auth/node_modules
+6.ts.next.drizzle.jest.auth/.pnp
+6.ts.next.drizzle.jest.auth/.pnp.*
+6.ts.next.drizzle.jest.auth/.yarn/*
+6.ts.next.drizzle.jest.auth/!.yarn/patches
+6.ts.next.drizzle.jest.auth/!.yarn/plugins
+6.ts.next.drizzle.jest.auth/!.yarn/releases
+6.ts.next.drizzle.jest.auth/!.yarn/versions
+
+# testing
+6.ts.next.drizzle.jest.auth/coverage
+
+# next.js
+6.ts.next.drizzle.jest.auth/.next/
+6.ts.next.drizzle.jest.auth/out/
+
+# production
+6.ts.next.drizzle.jest.auth/build
+
+# misc
+6.ts.next.drizzle.jest.auth/.DS_Store
+6.ts.next.drizzle.jest.auth/*.pem
+
+# debug
+6.ts.next.drizzle.jest.auth/npm-debug.log*
+6.ts.next.drizzle.jest.auth/yarn-debug.log*
+6.ts.next.drizzle.jest.auth/yarn-error.log*
+6.ts.next.drizzle.jest.auth/.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+6.ts.next.drizzle.jest.auth/.env*
+
+# vercel
+6.ts.next.drizzle.jest.auth/.vercel
+
+# typescript
+6.ts.next.drizzle.jest.auth/*.tsbuildinfo
+6.ts.next.drizzle.jest.auth/next-env.d.ts
