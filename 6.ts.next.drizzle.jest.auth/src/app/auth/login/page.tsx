@@ -1,31 +1,36 @@
 "use client"
 import { useForm } from "react-hook-form"
-import axios from "axios";
-import { useState } from "react";
+
+import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 type Inputs = {
-    username: string,
     email: string,
     password: string,
-    confirmPassword: string
+
 }
 
-function RegisterPage() {
+function LoginPage() {
     const { register, handleSubmit, formState: { errors } } = useForm<Inputs>();
+    const [error, setError] = useState("");
     const router = useRouter();
     //const [message, setMessage] =
     const onSubmit = handleSubmit(async (data) => {
         //console.log(data)
-        const resh = await axios.post('/api/auth/register', data);
-        //console.log(resh)
-        //console.log('red')
-        if (resh?.statusText) return router.push("/auth/login")
+        const res = await signIn("credentials",{
+            email: data.email,
+            password: data.password,
+            redirect: false
+        })
 
+        if (res?.error) return setError(res.error as string)
 
+        if (res?.ok) return router.push("/dashboard")
+        
     })
 
-    
+    console.log(errors)
 
     return (
         <div className="h-[calc(100vh-7rem)] flex justify-center items-center">
@@ -33,22 +38,8 @@ function RegisterPage() {
                 <h1 className="text-slate-200 font-black text-4xl mb-4">
                     Register
                 </h1>
-                <label htmlFor="username" className="text-slate-400 mb-2 block text-lg">
-                    Username
-                </label>
-                <input type="text"
-                    {...register("username", {
-                        required: {
-                            value: true,
-                            message: 'Username is required'
-                        }
-                    })}
-                    className="p-3 rounded block mb-2 bg-slate-900 text-slate-300 w-full" />
-                {
-                    errors.username && (
-                        <span className="text-red-300">{errors.username.message}</span>
-                    )
-                }
+                { error && <div className="bg-red-500 text-white p-2 mb-2">{error}</div>}
+                
                 <label htmlFor="email" className="text-slate-400 mb-2 block text-lg">
                     Email
                 </label>
@@ -80,24 +71,11 @@ function RegisterPage() {
                         <span className="text-red-300">{errors.password.message}</span>
                     )
                 }
-                <label htmlFor="confirmPassword" className="text-slate-400 mb-2 block text-lg">
-                    Confirm Password
-                </label>
-                <input type="confirmPassword" {...register("confirmPassword", {
-                    required: {
-                            value: true,
-                            message: 'Confirm Password is required'
-                        }
-                })} className="p-3 rounded block mb-2 bg-slate-900 text-slate-300 w-full" />
-                {
-                    errors.confirmPassword && (
-                        <span className="text-red-300">{errors.confirmPassword.message}</span>
-                    )
-                }
+                
                 <button className="w-full bg-blue-500 text-white p-3 rounded-lg mt-2 ">Register</button>
             </form>
         </div>
     )
 }
 
-export default RegisterPage;
+export default LoginPage;
