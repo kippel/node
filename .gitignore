@@ -98,3 +98,44 @@
 # typescript
 6.ts.next.drizzle.jest.auth/*.tsbuildinfo
 6.ts.next.drizzle.jest.auth/next-env.d.ts
+
+
+
+7.ts.next.drizzle.docker/node_modules
+7.ts.next.drizzle.docker/.pnp
+7.ts.next.drizzle.docker/.pnp.*
+7.ts.next.drizzle.docker/.yarn/*
+7.ts.next.drizzle.docker/!.yarn/patches
+7.ts.next.drizzle.docker/!.yarn/plugins
+7.ts.next.drizzle.docker/!.yarn/releases
+7.ts.next.drizzle.docker/!.yarn/versions
+
+# testing
+7.ts.next.drizzle.docker/coverage
+
+# next.js
+7.ts.next.drizzle.docker/.next/
+7.ts.next.drizzle.docker/out/
+
+# production
+7.ts.next.drizzle.docker/build
+
+# misc
+7.ts.next.drizzle.docker/.DS_Store
+7.ts.next.drizzle.docker/*.pem
+
+# debug
+7.ts.next.drizzle.docker/npm-debug.log*
+7.ts.next.drizzle.docker/yarn-debug.log*
+7.ts.next.drizzle.docker/yarn-error.log*
+7.ts.next.drizzle.docker/.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+7.ts.next.drizzle.docker/.env*
+
+# vercel
+7.ts.next.drizzle.docker/.vercel
+
+# typescript
+7.ts.next.drizzle.docker/*.tsbuildinfo
+7.ts.next.drizzle.docker/next-env.d.ts
