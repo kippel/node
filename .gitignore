@@ -139,3 +139,6 @@
 # typescript
 7.ts.next.drizzle.docker/*.tsbuildinfo
 7.ts.next.drizzle.docker/next-env.d.ts
+
+
+8.typescript.node.gtts/node_modules/*
