@@ -182,3 +182,43 @@
 # typescript
 9.typescript.next.drag-drop/*.tsbuildinfo
 9.typescript.next.drag-drop/next-env.d.ts
+
+
+10.typescript.next.drag-drop.dos/node_modules
+10.typescript.next.drag-drop.dos/.pnp
+10.typescript.next.drag-drop.dos/.pnp.*
+10.typescript.next.drag-drop.dos/.yarn/*
+10.typescript.next.drag-drop.dos/!.yarn/patches
+10.typescript.next.drag-drop.dos/!.yarn/plugins
+10.typescript.next.drag-drop.dos/!.yarn/releases
+10.typescript.next.drag-drop.dos/!.yarn/versions
+
+# testing
+10.typescript.next.drag-drop.dos/coverage
+
+# next.js
+10.typescript.next.drag-drop.dos/.next/
+10.typescript.next.drag-drop.dos/out/
+
+# production
+10.typescript.next.drag-drop.dos/build
+
+# misc
+10.typescript.next.drag-drop.dos/.DS_Store
+10.typescript.next.drag-drop.dos/*.pem
+
+# debug
+10.typescript.next.drag-drop.dos/npm-debug.log*
+10.typescript.next.drag-drop.dos/yarn-debug.log*
+10.typescript.next.drag-drop.dos/yarn-error.log*
+10.typescript.next.drag-drop.dos/.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+10.typescript.next.drag-drop.dos/.env*
+
+# vercel
+10.typescript.next.drag-drop.dos/.vercel
+
+# typescript
+10.typescript.next.drag-drop.dos/*.tsbuildinfo
+10.typescript.next.drag-drop.dos/next-env.d.ts
