@@ -280,3 +280,6 @@
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 11.next.nest.prisma/backend/report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+11.next.nest.prisma/backend/prisma/migrations/*
+11.next.nest.prisma/backend/prisma/dev.db
