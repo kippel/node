@@ -222,3 +222,61 @@
 # typescript
 10.typescript.next.drag-drop.dos/*.tsbuildinfo
 10.typescript.next.drag-drop.dos/next-env.d.ts
+
+
+# compiled output
+11.next.nest.prisma/backend/dist
+11.next.nest.prisma/backend/node_modules
+11.next.nest.prisma/backend/build
+
+# Logs
+11.next.nest.prisma/backend/logs
+11.next.nest.prisma/backend/*.log
+11.next.nest.prisma/backend/npm-debug.log*
+11.next.nest.prisma/backend/pnpm-debug.log*
+11.next.nest.prisma/backend/yarn-debug.log*
+11.next.nest.prisma/backend/yarn-error.log*
+11.next.nest.prisma/backend/lerna-debug.log*
+
+# OS
+11.next.nest.prisma/backend/.DS_Store
+
+# Tests
+11.next.nest.prisma/backend/coverage
+11.next.nest.prisma/backend/.nyc_output
+
+# IDEs and editors
+11.next.nest.prisma/backend/.idea
+11.next.nest.prisma/backend/.project
+11.next.nest.prisma/backend/.classpath
+11.next.nest.prisma/backend/.c9/
+11.next.nest.prisma/backend/*.launch
+11.next.nest.prisma/backend/.settings/
+11.next.nest.prisma/backend/*.sublime-workspace
+
+# IDE - VSCode
+11.next.nest.prisma/backend/.vscode/*
+11.next.nest.prisma/backend/!.vscode/settings.json
+11.next.nest.prisma/backend/!.vscode/tasks.json
+11.next.nest.prisma/backend/!.vscode/launch.json
+11.next.nest.prisma/backend/!.vscode/extensions.json
+
+# dotenv environment variable files
+11.next.nest.prisma/backend/.env
+11.next.nest.prisma/backend/.env.development.local
+11.next.nest.prisma/backend/.env.test.local
+11.next.nest.prisma/backend/.env.production.local
+11.next.nest.prisma/backend/.env.local
+
+# temp directory
+11.next.nest.prisma/backend/.temp
+11.next.nest.prisma/backend/.tmp
+
+# Runtime data
+11.next.nest.prisma/backend/pids
+11.next.nest.prisma/backend/*.pid
+11.next.nest.prisma/backend/*.seed
+11.next.nest.prisma/backend/*.pid.lock
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+11.next.nest.prisma/backend/report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
