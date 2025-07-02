@@ -283,3 +283,44 @@
 
 11.next.nest.prisma/backend/prisma/migrations/*
 11.next.nest.prisma/backend/prisma/dev.db
+
+
+# dependencies
+11.next.nest.prisma/frontend/node_modules
+11.next.nest.prisma/frontend/.pnp
+11.next.nest.prisma/frontend/.pnp.*
+11.next.nest.prisma/frontend/.yarn/*
+11.next.nest.prisma/frontend/!.yarn/patches
+11.next.nest.prisma/frontend/!.yarn/plugins
+11.next.nest.prisma/frontend/!.yarn/releases
+11.next.nest.prisma/frontend/!.yarn/versions
+
+# testing
+11.next.nest.prisma/frontend/coverage
+
+# next.js
+11.next.nest.prisma/frontend/.next/
+11.next.nest.prisma/frontend/out/
+
+# production
+11.next.nest.prisma/frontend/build
+
+# misc
+11.next.nest.prisma/frontend/.DS_Store
+11.next.nest.prisma/frontend/*.pem
+
+# debug
+11.next.nest.prisma/frontend/npm-debug.log*
+11.next.nest.prisma/frontend/yarn-debug.log*
+11.next.nest.prisma/frontend/yarn-error.log*
+11.next.nest.prisma/frontend/.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+11.next.nest.prisma/frontend/.env*
+
+# vercel
+11.next.nest.prisma/frontend/.vercel
+
+# typescript
+11.next.nest.prisma/frontend/*.tsbuildinfo
+11.next.nest.prisma/frontend/next-env.d.ts
