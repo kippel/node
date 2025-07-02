@@ -26,14 +26,20 @@ export class UserService {
         const { password, ...result} = newUser;
 
         return result;
-
-
     }
 
     async findByName(name: string) {
         return await this.prisma.user.findUnique({
             where: {
                 name: name,
+            },
+        });
+    }
+
+    async findById(id: number) {
+        return await this.prisma.user.findUnique({
+            where: {
+                id: id,
             },
         });
     }
