@@ -16,6 +16,9 @@ export const authOptions: NextAuthOptions = {
                 password: { label: "Password", type: "password"},
             },
             async authorize(credentials, req){
+
+                console.log("red")
+
                 if (!credentials?.username || !credentials?.password) return null;
                 const { username, password } = credentials;
                 const res = await fetch(Backend_URL + "/auth/login",{
@@ -30,6 +33,7 @@ export const authOptions: NextAuthOptions = {
                 });
                 if (res.status  == 401){
                     console.log(res.statusText);
+                    console.log("dddd")
                     return null;
                 }
 
@@ -51,6 +55,9 @@ export const authOptions: NextAuthOptions = {
 
             return session;
         },
+    },
+    pages: {
+      signIn: '/'
     },
 
 };
