@@ -1,7 +1,7 @@
 import { Backend_URL } from "@/lib/Constants";
 import NextAuth, { NextAuthOptions } from "next-auth";
 import CreadentialsProvider from "next-auth/providers/credentials";
-
+import axios from "axios";
 
 
 export const authOptions: NextAuthOptions = {
@@ -23,6 +23,31 @@ export const authOptions: NextAuthOptions = {
                 
                 if (!credentials?.username || !credentials?.password) return null;
                 const { username, password } = credentials;
+
+                try {
+                    const res = await axios.post(`${backendUrl}/api/auth/login`, {
+                        username,
+                        password,
+                    });
+
+                    const data = res.data;
+
+                    console.log("✅ Login successful:", data);
+                    return data; // must include at least a `user` object
+
+                } catch (error: any) {
+                    /*
+                    if (axios.isAxiosError(error)) {
+                        console.error("❌ Login error:", error.response?.status, error.response?.data);
+                    } else {
+                        console.error("❌ Unexpected error:", error);
+                    }
+                    */
+                    return null;
+                }
+
+                
+                /*
                 const res = await fetch( `${backendUrl}/api/auth/login`,{
                     method: "POST",
                     body: JSON.stringify({
@@ -45,6 +70,7 @@ export const authOptions: NextAuthOptions = {
                 console.log(user)
                 console.log("kkkkkkkkkkkk")
                 return user;
+                */
             },
         }),
     ],
