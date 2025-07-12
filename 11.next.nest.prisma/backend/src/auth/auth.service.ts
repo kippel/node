@@ -3,7 +3,7 @@ import { LoginDto } from './dto/auth.dto';
 import { UserService } from 'src/user/user.service';
 import { compare } from 'bcrypt';
 import { JwtService } from '@nestjs/jwt';
-import { access } from 'fs';
+
 
 @Injectable()
 export class AuthService {
@@ -15,14 +15,18 @@ export class AuthService {
 
     async login(dto: LoginDto){
         const user = await this.validateUser(dto);
-
+        /*
+        sub: {
+                name: user.name,
+            },
+        */
         const payload = {
             username: user.name,
             sub: {
                 name: user.name,
             },
         };
-
+        console.log("eded")
         return {
             user,
             backendTokens: {
@@ -54,7 +58,7 @@ export class AuthService {
 
     }
 
-    async refreshToker(user:any){
+    async refreshToken(user:any){
         const payload = {
             username: user.username,
             sub: user.sub

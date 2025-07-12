@@ -1,8 +1,6 @@
 import { CanActivate, ExecutionContext, Injectable, UnauthorizedException } from "@nestjs/common";
 import { JwtService } from "@nestjs/jwt";
 import { Request } from "express";
-import { request } from "http";
-import { Observable } from "rxjs";
 
 @Injectable()
 export class RefreshJwtGuard implements CanActivate {
@@ -28,8 +26,7 @@ export class RefreshJwtGuard implements CanActivate {
     }
 
     private extractTokenFromHeader(request: Request) {
-        //const [type, token] = requst.headers.authorization.split(' ') ?? [];
         const [type, token] = request.headers.authorization?.split(' ') ?? [];
-        return type === 'Refresh' ? token : undefined;
+        return type === 'Bearer' ? token : undefined;
     }
 }
