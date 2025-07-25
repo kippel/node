@@ -324,3 +324,11 @@
 # typescript
 11.next.nest.prisma/frontend/*.tsbuildinfo
 11.next.nest.prisma/frontend/next-env.d.ts
+
+
+
+12.next.fastapi/backend/.venv/*
+12.next.fastapi/backend/api/__pycache__/*
+12.next.fastapi/backend/api/routers/__pycache__/*
+12.next.fastapi/backend/api/sql_app.db
+12.next.fastapi/.env
