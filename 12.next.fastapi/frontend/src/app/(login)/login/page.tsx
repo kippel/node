@@ -1,17 +1,42 @@
-import AuthContext from "@/components/AuthContext";
-import { useContext, useState } from "react";
+"use client"
 import { useForm } from "react-hook-form"
 
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { useContext ,useState } from "react";
+import Link from "next/link";
+import { Button } from '@/components/ui/button';
+import ButtonLogin from "../button-login";
+import { Card, CardHeader, CardContent, CardTitle } from '@/components/ui/card';
+import AuthContext from "@/components/AuthContext";
+
+
+type Inputs = {
+    username: string,
+    password: string,
+}
+
+
 const LoginPage = () => {
-
+    const { register, handleSubmit, formState: { errors } } = useForm<Inputs>();
+    const [error, setError] = useState("");
+    //const router = useRouter();
+    
     const { login } = useContext(AuthContext);
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+    
+    const onSubmit = handleSubmit(async (data) => {
+        //e.preventDefault();
+        const { username, password } = data;
+        login(username, password)
+     });
 
+
+    /*
     const handleSubmit = (e) => {
         e.preventDefault();
         login(username, password)
     };
+    */
 
 return (
         <div className="flex min-h-screen items-center justify-center">

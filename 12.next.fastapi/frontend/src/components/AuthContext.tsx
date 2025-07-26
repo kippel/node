@@ -11,7 +11,7 @@ type User = {
 
 type AuthContextType = {
   user: User | null;
-  login: (username: string, password: string) => Promise<void>;
+  login: () => void;
   logout: () => void;
 };
 
@@ -21,7 +21,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-const AuthProvider = ({ children }: Props) => {
+export const AuthProvider = ({ children }: Props) => {
   const [user, setUser] = useState<User | null>(null);
   const router = useRouter();
 
@@ -42,7 +42,7 @@ const AuthProvider = ({ children }: Props) => {
       axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
       localStorage.setItem("token", token);
       setUser(response.data);
-      router.push("/");
+      router.push("/dash");
     } catch (error) {
       console.error("Login Failed:", error);
     }
@@ -52,7 +52,8 @@ const AuthProvider = ({ children }: Props) => {
     setUser(null);
     localStorage.removeItem("token");
     delete axios.defaults.headers.common["Authorization"];
-    router.push("/login");
+    //router.push("/login");
+    router.push("/");
   };
 
   return (

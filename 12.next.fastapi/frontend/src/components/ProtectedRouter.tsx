@@ -8,13 +8,13 @@ type Props = {
   children: React.ReactNode;
 };
 
-const ProtectedRoute = ({ children} : Props ) => {
+export const ProtectedRoute = ({ children} : Props ) => {
     const { user } = useContext(AuthContext);
     const router = useRouter();
-
+    console.log("ProtectedRoute user:", user);
     useEffect(() => {
         if (!user){
-            router.push('/login');
+            router.push('/');
         } 
     }, [user, router]);
 
