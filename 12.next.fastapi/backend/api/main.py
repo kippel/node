@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .routers import auth
+from .routers import auth, workouts
 
 from .database import Base, engine
 
@@ -16,13 +16,14 @@ app.add_middleware(
     allow_headers=["*"],  # Allows all headers
 )
 
-from api.models import User
+from api.models import User, Workout, Routine
 from api.deps import db_dependency
 @app.get("/")
 def root(db: db_dependency):
 
     user = db.query(User).all()
-
-    return {"user": user}
+    workout = db.query(Workout).all()
+    return {"user": user, "workout": workout}
 
 app.include_router(auth.router)
+app.include_router(workouts.router)

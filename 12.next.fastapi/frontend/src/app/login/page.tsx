@@ -1,0 +1,72 @@
+import AuthContext from "@/components/AuthContext";
+import { useContext, useState } from "react";
+import { useForm } from "react-hook-form"
+
+const LoginPage = () => {
+
+    const { login } = useContext(AuthContext);
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        login(username, password)
+    };
+
+return (
+        <div className="flex min-h-screen items-center justify-center">
+            <ButtonLogin><Link href="/auth/register">Register</Link></ButtonLogin>
+            <Card className="w-full max-w-sm">
+                <CardHeader>
+                    <CardTitle className="text-xl">Iniciar sesión</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <form onSubmit={onSubmit} className="space-y-4">
+                        <h1 className="text-slate-200 font-black text-4xl mb-4">
+                            Login
+                        </h1>
+                        {error && <div className="bg-red-500 text-white p-2 mb-2">{error}</div>}
+
+                        <label htmlFor="username" className="text-slate-400 mb-2 block text-lg">
+                            username
+                        </label>
+                        <input type="text"
+                            {...register("username", {
+                                required: {
+                                    value: true,
+                                    message: 'Namel is required'
+                                }
+                            })}
+                            className="p-3 rounded block mb-2 bg-slate-800 text-slate-300 w-full" />
+                        {
+                            errors.username && (
+                                <span className="text-red-300">{errors.username.message}</span>
+                            )
+                        }
+
+                        <label htmlFor="password" className="text-slate-400 mb-2 block text-lg">
+                            Password
+                        </label>
+                        <input type="password" {...register("password", {
+                            required: {
+                                value: true,
+                                message: 'Password is required'
+                            }
+                        })} className="p-3 rounded block mb-2 bg-slate-800 text-slate-300 w-full" />
+                        {
+                            errors.password && (
+                                <span className="text-red-300">{errors.password.message}</span>
+                            )
+                        }
+                        <Button variant="primary" className="w-full mt-2 rounded-lg">Login</Button>
+
+                    </form>
+
+                </CardContent>
+            </Card>
+
+        </div>
+    )
+}
+
+export default LoginPage;
