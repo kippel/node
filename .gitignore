@@ -332,3 +332,8 @@
 12.next.fastapi/backend/api/routers/__pycache__/*
 12.next.fastapi/backend/api/sql_app.db
 12.next.fastapi/.env
+
+
+13.fastapi.next.jwt/backend/.venv/*
+13.fastapi.next.jwt/backend/api/__pycache__/*
+13.fastapi.next.jwt/backend/api/test.db
