@@ -14,7 +14,8 @@ app = FastAPI()
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 origins = [
-    "http://localhost:3000"
+    "http://localhost:3000",
+    "http://192.168.50.16:3000"
 ]
 
 app.add_middleware(
@@ -99,6 +100,7 @@ def verify_token(token: str = Depends(oauth2_scheme)):
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
         username: str = payload.get("sub")
+        
         if username is None:
             raise HTTPException(status_code=401, detail="Invalid authentication credentials")
         return payload
@@ -109,3 +111,22 @@ def verify_token(token: str = Depends(oauth2_scheme)):
 async def verify_user_token(token: str):
     verify_token(token=token)
     return {"message": "Token is valid"}
+
+
+
+@app.post("/api/auth/login")
+async def login(user: UserCreate, db: Session = Depends(get_db)):
+    print(f"Attempting to log in user: {user.username}")
+    user = authenticate_user(user.username, user.password, db)
+    if not user:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Incorrect username or password",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    
+    access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+    access_token = create_access_token(
+        data={"sub": user.username, "id": user.id}, expires_delta=access_token_expires
+    )
+    return {"access_token": access_token, "token_type": "bearer"}
