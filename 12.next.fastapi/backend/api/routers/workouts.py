@@ -32,3 +32,8 @@ def create_workout(db: db_dependency, user: user_dependency, workout: WorkoutCre
     db.commit()
     db.refresh(workout_model)
     return workout_model
+
+
+@router.get("/red")
+def create_workout(user: user_dependency):
+    return {"red" : "bar", "user" : user}

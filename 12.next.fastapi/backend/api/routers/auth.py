@@ -36,11 +36,24 @@ def authenticate_user(username: str, password: str, db):
         return False
     return user
 
+''' 
 def create_access_token(username: str, user_id: int, expires_delta: timedelta | None = None):
     encode = {"sub": username, "id": user_id}
     expires = datetime.now(timezone.utc) + expires_delta
     encode.update({"exp": expires})
     return jwt.encode(encode, SECRET_KEY, algorithm=ALGORITHM)
+'''
+def create_access_token(username: str, user_id: int, expires_delta: timedelta | None = None):
+    encode = {"sub": username, "id": user_id}
+    to_encode = encode.copy()
+    if expires_delta:
+        expire = datetime.now(timezone.utc) + expires_delta
+    else:
+        expire = datetime.now(timezone.utc) + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+    to_encode.update({"exp": expire})
+    #expires = datetime.now(timezone.utc) + expires_delta
+    #encode.update({"exp": expires})
+    return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM) 
 
 
 @router.post("/", status_code=status.HTTP_201_CREATED)
