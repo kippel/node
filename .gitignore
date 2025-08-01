@@ -337,3 +337,49 @@
 13.fastapi.next.jwt/backend/.venv/*
 13.fastapi.next.jwt/backend/api/__pycache__/*
 13.fastapi.next.jwt/backend/api/test.db
+
+
+14.next.fastapi.jwt/frontend/node_modules
+14.next.fastapi.jwt/frontend/.pnp
+14.next.fastapi.jwt/frontend/.pnp.*
+14.next.fastapi.jwt/frontend/.yarn/*
+14.next.fastapi.jwt/frontend/!.yarn/patches
+14.next.fastapi.jwt/frontend/!.yarn/plugins
+14.next.fastapi.jwt/frontend/!.yarn/releases
+14.next.fastapi.jwt/frontend/!.yarn/versions
+
+# testing
+14.next.fastapi.jwt/frontend/coverage
+
+# next.js
+14.next.fastapi.jwt/frontend/.next/
+14.next.fastapi.jwt/frontend/out/
+
+# production
+14.next.fastapi.jwt/frontend/build
+
+# misc
+14.next.fastapi.jwt/frontend/.DS_Store
+14.next.fastapi.jwt/frontend/*.pem
+
+# debug
+14.next.fastapi.jwt/frontend/npm-debug.log*
+14.next.fastapi.jwt/frontend/yarn-debug.log*
+14.next.fastapi.jwt/frontend/yarn-error.log*
+14.next.fastapi.jwt/frontend/.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+14.next.fastapi.jwt/frontend/.env*
+
+# vercel
+14.next.fastapi.jwt/frontend/.vercel
+
+# typescript
+14.next.fastapi.jwt/frontend/*.tsbuildinfo
+14.next.fastapi.jwt/frontend/next-env.d.ts
+
+14.next.fastapi.jwt/backend/.venv/*
+14.next.fastapi.jwt/backend/api/__pycache__/*
+14.next.fastapi.jwt/backend/api/routers/__pycache__/*
+
+14.next.fastapi.jwt/backend/api/sql_app.db
