@@ -71,13 +71,12 @@ async def create_user( db: db_dependency, create_user_request: UserCreateRequest
 
     return {"message": create_user_request}
 
-'''
+
 @router.post("/token", response_model=Token)
 async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm, Depends()],
                                  db: db_dependency):
     
-    print(form_data)
-    print("eeeeeeeeeee")
+   
     user = authenticate_user(form_data.username, form_data.password, db)
 
     if not user:
@@ -92,33 +91,15 @@ async def login_for_access_token(form_data: Annotated[OAuth2PasswordRequestForm,
         expires_delta=timedelta(minutes=30)
     )
     
-    return {"access_token": token, "token_type": "bearer"}
-'''
-
-@router.post("/login")
-async def login_token(users: UserRequest, db: db_dependency):
-
-    #print(form_data)
-    
-    user = authenticate_user(users.username, users.password, db)
-    
-    if not user:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Incorrect username or password",
-            headers={"WWW-Authenticate": "Bearer"},
-        )
-    token = create_access_token(
-        username=user.username,
-        user_id=user.id,        
-        expires_delta=timedelta(minutes=30)
-    )
-    
+    ''' 
     user_id = {
        "sub": user.username,
        "id": user.id
     }
+    '''
 
-    return {"access_token": token, "token_type": "bearer", "user" : user_id}
+
+    return {"access_token": token, "token_type": "bearer"}
+
 
     

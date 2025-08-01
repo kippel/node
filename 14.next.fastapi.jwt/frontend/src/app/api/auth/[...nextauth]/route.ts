@@ -24,11 +24,23 @@ export const authOptions: NextAuthOptions = {
                 
                 const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
                 
-                
-                const res = await axios.post(`${backendUrl}/auth/login`, {
+                const params = new URLSearchParams();
+                params.append("username", username);
+                params.append("password", password);
+
+                const res = await axios.post(`${backendUrl}/auth/token`, params, {
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                });
+
+                /*
+                console.log(`${backendUrl}/auth/token`)                
+                const res = await axios.post(`${backendUrl}/auth/token`, {
                         username,
                         password,
                 });
+                */
 
                 const data = res.data;
 

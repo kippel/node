@@ -25,5 +25,13 @@ def root(db: db_dependency):
     
     return {"user": user}
 
+''' 
+@app.get("/red")
+def root_red(user: ):
+
+    user = db.query(User).all()
+    
+    return {"user": user}
+'''
 app.include_router(auth.router)
 app.include_router(workouts.router)
