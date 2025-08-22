@@ -383,3 +383,45 @@
 14.next.fastapi.jwt/backend/api/routers/__pycache__/*
 
 14.next.fastapi.jwt/backend/api/sql_app.db
+
+
+
+# dependencies
+15.next.next-intl/node_modules
+15.next.next-intl/.pnp
+15.next.next-intl/.pnp.*
+15.next.next-intl/.yarn/*
+15.next.next-intl/!.yarn/patches
+15.next.next-intl/!.yarn/plugins
+15.next.next-intl/!.yarn/releases
+15.next.next-intl/!.yarn/versions
+
+# testing
+15.next.next-intl/coverage
+
+# next.js
+15.next.next-intl/.next/
+15.next.next-intl/out/
+
+# production
+15.next.next-intl/build
+
+# misc
+15.next.next-intl/.DS_Store
+15.next.next-intl/*.pem
+
+# debug
+15.next.next-intl/npm-debug.log*
+15.next.next-intl/yarn-debug.log*
+15.next.next-intl/yarn-error.log*
+15.next.next-intl/.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+15.next.next-intl/.env*
+
+# vercel
+15.next.next-intl/.vercel
+
+# typescript
+15.next.next-intl/*.tsbuildinfo
+15.next.next-intl/next-env.d.ts
