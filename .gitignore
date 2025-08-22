@@ -425,3 +425,46 @@
 # typescript
 15.next.next-intl/*.tsbuildinfo
 15.next.next-intl/next-env.d.ts
+
+
+
+
+# dependencies
+16.next.next-intl/node_modules
+16.next.next-intl/.pnp
+16.next.next-intl/.pnp.*
+16.next.next-intl/.yarn/*
+16.next.next-intl/!.yarn/patches
+16.next.next-intl/!.yarn/plugins
+16.next.next-intl/!.yarn/releases
+16.next.next-intl/!.yarn/versions
+
+# testing
+16.next.next-intl/coverage
+
+# next.js
+16.next.next-intl/.next/
+16.next.next-intl/out/
+
+# production
+16.next.next-intl/build
+
+# misc
+16.next.next-intl/.DS_Store
+16.next.next-intl/*.pem
+
+# debug
+16.next.next-intl/npm-debug.log*
+16.next.next-intl/yarn-debug.log*
+16.next.next-intl/yarn-error.log*
+16.next.next-intl/.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+16.next.next-intl/.env*
+
+# vercel
+16.next.next-intl/.vercel
+
+# typescript
+16.next.next-intl/*.tsbuildinfo
+16.next.next-intl/next-env.d.ts
