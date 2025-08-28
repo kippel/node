@@ -474,3 +474,8 @@
 17.fastapi.pytest/.venv/*
 17.fastapi.pytest/api/__pycache__/*
 17.fastapi.pytest/test/__pycache__/*
+
+18.fastapi.pytest.docker/.pytest_cache/*
+18.fastapi.pytest.docker/.venv/*
+18.fastapi.pytest.docker/api/__pycache__/*
+18.fastapi.pytest.docker/test/__pycache__/*
