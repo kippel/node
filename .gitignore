@@ -484,3 +484,5 @@
 19.fastapi.pytest.sqlalchemy.docker/backend/.venv/*
 19.fastapi.pytest.sqlalchemy.docker/backend/api/__pycache__/*
 19.fastapi.pytest.sqlalchemy.docker/backend/test/__pycache__/*
+19.fastapi.pytest.sqlalchemy.docker/backend/api/routers/__pycache__/*
+19.fastapi.pytest.sqlalchemy.docker/backend/user.db
