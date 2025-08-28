@@ -468,3 +468,9 @@
 # typescript
 16.next.next-intl/*.tsbuildinfo
 16.next.next-intl/next-env.d.ts
+
+
+17.fastapi.pytest/.pytest_cache/*
+17.fastapi.pytest/.venv/*
+17.fastapi.pytest/api/__pycache__/*
+17.fastapi.pytest/test/__pycache__/*
