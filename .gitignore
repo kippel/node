@@ -486,3 +486,12 @@
 19.fastapi.pytest.sqlalchemy.docker/backend/test/__pycache__/*
 19.fastapi.pytest.sqlalchemy.docker/backend/api/routers/__pycache__/*
 19.fastapi.pytest.sqlalchemy.docker/backend/user.db
+
+
+20.fastapi.pytest.sqlalchemy.docker/backend/.pytest_cache/*
+20.fastapi.pytest.sqlalchemy.docker/backend/.venv/*
+20.fastapi.pytest.sqlalchemy.docker/backend/api/__pycache__/*
+20.fastapi.pytest.sqlalchemy.docker/backend/test/__pycache__/*
+20.fastapi.pytest.sqlalchemy.docker/backend/api/routers/__pycache__/*
+20.fastapi.pytest.sqlalchemy.docker/backend/user.db
+20.fastapi.pytest.sqlalchemy.docker/backend/test_db.db
