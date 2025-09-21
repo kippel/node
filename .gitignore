@@ -495,3 +495,53 @@
 20.fastapi.pytest.sqlalchemy.docker/backend/api/routers/__pycache__/*
 20.fastapi.pytest.sqlalchemy.docker/backend/user.db
 20.fastapi.pytest.sqlalchemy.docker/backend/test_db.db
+
+
+21.fastapi.pytest.mongodb.docker/backend/.pytest_cache/*
+21.fastapi.pytest.mongodb.docker/backend/.venv/*
+21.fastapi.pytest.mongodb.docker/backend/api/__pycache__/*
+21.fastapi.pytest.mongodb.docker/backend/test/__pycache__/*
+
+
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+22.typescript.next.drag-drop/node_modules
+22.typescript.next.drag-drop/.pnp
+22.typescript.next.drag-drop/.pnp.*
+22.typescript.next.drag-drop/.yarn/*
+22.typescript.next.drag-drop/!.yarn/patches
+22.typescript.next.drag-drop/!.yarn/plugins
+22.typescript.next.drag-drop/!.yarn/releases
+22.typescript.next.drag-drop/!.yarn/versions
+
+# testing
+22.typescript.next.drag-drop/coverage
+
+# next.js
+22.typescript.next.drag-drop/.next/
+22.typescript.next.drag-drop/out/
+
+# production
+22.typescript.next.drag-drop/build
+
+# misc
+22.typescript.next.drag-drop/.DS_Store
+22.typescript.next.drag-drop/*.pem
+
+# debug
+22.typescript.next.drag-drop/npm-debug.log*
+22.typescript.next.drag-drop/yarn-debug.log*
+22.typescript.next.drag-drop/yarn-error.log*
+22.typescript.next.drag-drop/.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+22.typescript.next.drag-drop/.env*
+
+# vercel
+22.typescript.next.drag-drop/.vercel
+
+# typescript
+22.typescript.next.drag-drop/*.tsbuildinfo
+22.typescript.next.drag-drop/next-env.d.ts

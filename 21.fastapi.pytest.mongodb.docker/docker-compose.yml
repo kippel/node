@@ -1,0 +1,26 @@
+services:
+  web:
+    build: ./backend
+    command: uv run uvicorn api.main:app --reload --workers 1 --host 0.0.0.0 --port 4000
+    container_name: backend
+    volumes:
+      - ./backend:/app/
+    ports:
+      - 4000:4000
+    environment:
+      - UVICORN_RELOAD=true
+      - MONGO_URI=mongodb://mongo:27017/mydatabase
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo:7.0
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=mydatabase
+volumes:
+  mongo_data:  
+
